@@ -10,3 +10,15 @@
 .search-product input {
   width: 100%;
 }
+.form-control:focus {
+  border-color: #fff;
+  outline: 0;
+  box-shadow: none !important;
+}
+
+.banner {
+  width: 80%;
+}
+img {
+  width: 100%;
+}
