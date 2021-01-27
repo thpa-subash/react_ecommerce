@@ -12,50 +12,50 @@ const Banner =()=>{
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        speed: 8000,
+        autoplaySpeed: 7000,
         cssEase: "linear"
   
       };
-    const [adsBanner, setAdsBanner] = useState([
+    const [adsBanner] = useState([
         {
-            image: 'first',
-            text:'hello first'
+            'image': first,
+            'text': 'Hello First',
         },
         {
-            'image': 'second',
-            text:'hello second'
+            'image': second,
+            'text' :'Hello Second',
         },
+        {
+            'image': third,
+            'text' :'Hello Third',
+        }
 
     ]);
    
     return (
         
         <Slider {...settings}>
-      <div className="card text-white">
-        <img className="card-img" src={first} alt="Card image"/>
-        <div className="card-img-overlay">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p className="card-text">Last updated 3 mins ago</p>
-        </div>
-        </div>
-        <div className="card bg-dark text-white">
-        <img className="card-img" src={second} alt="Card image"/>
-        <div className="card-img-overlay">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p className="card-text">Last updated 3 mins ago</p>
-        </div>
-        </div>
-        <div className="card bg-dark text-white">
-        <img className="card-img" src={third} alt="Card image"/>
-        <div className="card-img-overlay">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p className="card-text">Last updated 3 mins ago</p>
-        </div>
-        </div>
+            {
+                adsBanner.map((banner, index) =>
+                    
+                        <div className="banner " key={index}>
+                   
+                    <img className="banner-img" src={banner.image} alt="Card image"/>
+  
+                    <h5 className="ctitle">{ banner.text}</h5>
+</div>
+
+
+
+
+
+
+                           
+            )
+            }
+     
+        
       
     </Slider>
     );
